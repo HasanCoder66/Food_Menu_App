@@ -4,7 +4,7 @@ import Footer from './components/footer.js'
 import Menu from './components/menu.js'
 import './App.css';
 
-function App() {
+function App () {
   
   return (
     <>
