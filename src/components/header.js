@@ -14,9 +14,9 @@ export const Header  = () => {
     export const Subheader  = () => {
 
         return(
-            <>
-            <h1 style={{color: "black" , fontSize:'26px', textAlign: "center", textTransform:"uppercase" , borderBottom: "1px solid black" , }} className='title'>our menu</h1>
-            </>
+            <div style={{display:'flex', justifyContent:'center'}}>
+            <h1 style={{width:'50%',color: "black" , fontSize:'26px', textAlign: "center", textTransform:"uppercase" , borderBottom: "1px solid #eda212" , }} className='title'>our menu</h1>
+            </div>
         )
     }
 

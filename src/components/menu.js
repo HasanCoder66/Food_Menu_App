@@ -39,23 +39,28 @@ const Menu = () => {
     }
 
     return (
-        <div style={{ padding: '0px 30px' }} >
+        <div >
             <p style={{ textAlign: 'center' }}>Authentic Italian Cuisine. 6 creative dishes to choose from. All from our stone oven, all are organic, all delicious  </p>
-            <InputGroup className="mb-5">
-                <input value={data} onChange={dataHandler}
+        <div style={{display:'flex', justifyContent:'flex-end', padding:'10px 40px'}}>
+        <InputGroup className="mb-5">
+                <input style={{width:'23vw', padding:'15px 10px' ,borderRadius:'20px'}} value={data} onChange={dataHandler}
                     placeholder="Search over items"
                     aria-label="Recipient's username"
                     aria-describedby="basic-addon2"
                 />
-                <Button className="mb-5" variant="warning" id="button-addon2" onClick={GetData}>
+                <Button style={{backgroundColor:'#eda212', color:'white', width:'13vw', padding:'15px 0px' ,borderRadius:'20px'}}className="mb-5" variant="warning" id="button-addon2" onClick={GetData}>
                     Search
                 </Button>
             </InputGroup>
+        </div>
 
+        <div style={{ width: "100vw", display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap" , paddingRight:'30px',marginBottom: "20px"}}>
+            
             {menu.map((items) => (
                 <CardContanier callBack={items} />
 
             ))}
+        </div>
 
             {console.log(menu)}
 
@@ -67,15 +72,15 @@ const Menu = () => {
 
 function CardContanier({ callBack }) {
     return (
-        <div style={{}} className="container-card ">
+        <div style={{marginBottom: "20px"}}>
         <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={callBack.image_url} />
+            <Card.Img  style={{width:'200px', height:'150px'}} variant="top" src={callBack.image_url} />
             <Card.Body>
                 <Card.Title>{callBack.title}</Card.Title>
                 <Card.Text>
                     {callBack.publisher}
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <Button style={{backgroundColor:'#eda212', color:'white', width:'13vw', padding:'15px 0px' ,borderRadius:'20px' }} variant="primary">Order Now</Button>
             </Card.Body>
         </Card>
         </div>
